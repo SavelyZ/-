@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ЭКОН УРФО</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__logo__img">
+                <img src="/img/header/logo.png" alt="не могу найти лого картинку:(" class="header__logo__img_">
+                <!--выношу отдельно(не в conteiner/ header__logo) тк не работает позиционирование, потом поправить)-->
+            </div>
+            <div class="header__container _conteiner">
+                <a href="" class="header__drop-menu">
+                    <img src="/img/header/drop-down.png" alt="не могу найти картинку(" class="header__drop-menu__img">
+                </a>
+                <div class="header__logo">
+                    <div class="header__logo__text">
+                        <img src="/img/header/logo_text.png" alt="" class="header_logo_textImg">
+                        <div class="header__logo__underText">Энергосберегающие технологии</div>
+                    </div>
+                </div>
+                <div class="header__search">
+                    <form action="#" class="header__search__inputForm">
+                        <input autocomplete="off" type="text" required name="form[]" placeholder="Поиск товаров..." class="header__search__input">
+                        <img src="/img/header/search.png" alt="" class="header__search__icon">
+                    </form>
+                </div>
+                <div class="header__BuyGroup">
+                    <!--сделать ссылками-->
+                    <img src="/img/Buy/Group 431.svg" alt="" class="BuyGroup__BuyDeliver">
+                    <img src="/img/Buy/user.svg" alt="" class="BuyGroup__User">
+                    <img src="/img/Buy/clarity_shopping-bag-line.svg" alt="" class="BuyGroup__Bag">
+                    <div class="bagCount">
+                        <div class="textBagCoutn">3</div>
+                    </div>
+                </div>
+            </div>
+            <!--по идее этот контейнер должн быть внутри предыдущего, но с ним немного траблы, так что он вынесен в отдельный-->
+            <div class="header__contactInfo__container _conteiner">
+                <div class="contactInfo__geo _contactInfoElement">
+                    <img src="/img/contactInfo/geo.svg" alt="">
+                    <a href="" class="geo"> Екатеринбург </a>
+                </div>
+                <div class="contactInfo__number _contactInfoElement">
+                    <img src="/img/contactInfo/number.svg" alt="">
+                    <a href="" class="number"> +7 (495) 506-36-50 </a>
+                </div>
+                <div class="contactInfo__email _contactInfoElement">
+                    <img src="/img/contactInfo/mail.svg" alt="">
+                    <a href="" class="email"> office@uconerfo.ru </a>
+                </div>
+                <div class="contactInfo__aplication _contactInfoElement">
+                    <img src="/img/contactInfo/edit.svg" alt="">
+                    <a href="" class="aplication"> Заявка на расчет </a>
+                </div>
+                <div class="contactInfo__contacts _contactInfoElement">
+                    <img src="/img/contactInfo/contact.svg" alt="">
+                    <a href="" class="contacts"> Контакты </a>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="advertisementPage">
+                <div class="advertisementPage__conteiner _conteiner">
+                    <div class="descriptionBlock">
+                        <article class="description">
+                            <div class="description__title">Дозаторы и антисептики</div>
+                            <div class="description__body">Устанавливаются в общественных местах для предотвращения распространения вирусов микробов</div>
+                        </article>
+                    </div>
+                    <div class="advertismentImg">
+                        <img src="/img/adverisment/product.png" alt="" class="advertismentImg__img">
+                    </div>
+                    <a href="" class="advertismentButton">
+                        <img src="/img/adverisment/nextBut.png" alt="" class="advertismentButton__img">
+                        <div class="advertismentButton__button">Подробнее</div>
+                    </a>
+                </div>
+            </div>
+            <div class="path">
+                <div class="path__conteiner _conteiner">
+                    <a href="" class="root">Главная /</a>
+                    <a href="" class="child">Отопительное оборудование</a>
+                </div>
+            </div>
+            <div class="pageMarketPlace">
+                <div class="pageMarketPlace__conteiner _conteiner">
+                    <div class="pageMarketPlace__title">
+                        Отопительное оборудование
+                    </div>
+                    <div class="marketPlace__body__conteiner">
+                        <div class="marketPlace__Filter">
+                            <div class="marketPlace__Filter__title__conteiner">
+                                <div class="title">Фильтры</div>
+                                <a href="" class="thowOff">Cбросить</a>
+                                <img class="imgFilterTitle" src="/img/marketPlace/info/krest.svg" alt="">
+                            </div>
+                            <form action="" method="post">
+                                <div class="filter__conteiner">
+                                    <div class="title">Отопительное оборудование</div>
+                                    <input type="checkbox" class="custom-checkbox" id="happy1" name="happy1">
+                                    <label for="happy1">Радиаторы отопления</label>
+                                    <input type="checkbox" class="custom-checkbox" id="happy2" name="happy2">
+                                    <label for="happy2">Конвекторы отопления</label>
+                                    <input type="checkbox" class="custom-checkbox" id="happy3" name="happy3">
+                                    <label for="happy3">Полотенцесушители</label>
+                                    <input type="checkbox" class="custom-checkbox" id="happy4" name="happy4">
+                                    <label for="happy4">Арматура для радиаторов</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="marketPlace__product__conteiner">
+                            <div class="product__controlInfo"></div>
+                            <div class="product__productGrid__conteiner">
+                                <div class="productGrid__productRow__conteiner">
+                                    <div class="product"></div>
+                                    <div class="product"></div>
+                                    <div class="product"></div>
+                                </div>
+                                <div class="productGrid__productRow__conteiner"></div>
+                                <div class="productGrid__productRow__conteiner"></div>
+                                <div class="productGrid__productRow__conteiner"></div>
+                                <div class="productGrid__productRow__conteiner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+</body>
+
+</html>

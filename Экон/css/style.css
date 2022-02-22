@@ -1,0 +1,576 @@
+    /* Обнуление */
+    
+    *,
+    *::before,
+    *::after {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    ul,
+    ol,
+    li {
+        list-style: none;
+    }
+    
+    img {
+        vertical-align: top;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: inherit;
+        font-size: inherit;
+    }
+    
+    input,
+    textarea {
+        outline: none;
+    }
+    
+    input:active,
+    textarea:active {
+        outline: none;
+    }
+    
+     :focus {
+        outline: none;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    textarea {
+        resize: horizontal;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        line-height: 1;
+        background: #fafafa;
+        font-size: 14px;
+        color: #252b42;
+        font-weight: 500;
+        font-family: Montserrat;
+    }
+    /* -----------------------FONTS----------------------------------------------------- */
+    
+    @font-face {
+        font-family: 'Euclid Circular A';
+        src: url('EuclidCircularA-Bold.eot');
+        src: local('Euclid Circular A Bold'), local('EuclidCircularA-Bold'), url('EuclidCircularA-Bold.eot?#iefix') format('embedded-opentype'), url('EuclidCircularA-Bold.woff2') format('woff2'), url('EuclidCircularA-Bold.woff') format('woff'), url('EuclidCircularA-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Euclid Circular A';
+        src: url('EuclidCircularA-Light.eot');
+        src: local('Euclid Circular A Light'), local('EuclidCircularA-Light'), url('EuclidCircularA-Light.eot?#iefix') format('embedded-opentype'), url('EuclidCircularA-Light.woff2') format('woff2'), url('EuclidCircularA-Light.woff') format('woff'), url('EuclidCircularA-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Euclid Circular A';
+        src: url('EuclidCircularA-Regular.eot');
+        src: local('Euclid Circular A Regular'), local('EuclidCircularA-Regular'), url('EuclidCircularA-Regular.eot?#iefix') format('embedded-opentype'), url('EuclidCircularA-Regular.woff2') format('woff2'), url('EuclidCircularA-Regular.woff') format('woff'), url('EuclidCircularA-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Euclid Circular A';
+        src: url('EuclidCircularA-SemiBold.eot');
+        src: local('Euclid Circular A SemiBold'), local('EuclidCircularA-SemiBold'), url('EuclidCircularA-SemiBold.eot?#iefix') format('embedded-opentype'), url('EuclidCircularA-SemiBold.woff2') format('woff2'), url('EuclidCircularA-SemiBold.woff') format('woff'), url('EuclidCircularA-SemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Euclid Circular A';
+        src: url('EuclidCircularA-Medium.eot');
+        src: local('Euclid Circular A Medium'), local('EuclidCircularA-Medium'), url('EuclidCircularA-Medium.eot?#iefix') format('embedded-opentype'), url('EuclidCircularA-Medium.woff2') format('woff2'), url('EuclidCircularA-Medium.woff') format('woff'), url('EuclidCircularA-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Circe';
+        src: url('Circe-Light.eot');
+        src: local('Circe Light'), local('Circe-Light'), url('Circe-Light.eot?#iefix') format('embedded-opentype'), url('Circe-Light.woff2') format('woff2'), url('Circe-Light.woff') format('woff'), url('Circe-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Circe';
+        src: url('Circe-Regular.eot');
+        src: local('Circe'), local('Circe-Regular'), url('Circe-Regular.eot?#iefix') format('embedded-opentype'), url('Circe-Regular.woff2') format('woff2'), url('Circe-Regular.woff') format('woff'), url('Circe-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Circe';
+        src: url('Circe-Bold.eot');
+        src: local('Circe Bold'), local('Circe-Bold'), url('Circe-Bold.eot?#iefix') format('embedded-opentype'), url('Circe-Bold.woff2') format('woff2'), url('Circe-Bold.woff') format('woff'), url('Circe-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Gilroy';
+        src: url('Gilroy-Medium.eot');
+        src: local('Gilroy Medium'), local('Gilroy-Medium'), url('Gilroy-Medium.eot?#iefix') format('embedded-opentype'), url('Gilroy-Medium.woff2') format('woff2'), url('Gilroy-Medium.woff') format('woff'), url('Gilroy-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+    }
+    /******************************************Base*******************************************/
+    
+    body {
+        font-family: Euclid Circular A;
+        background: #E5E5E5;
+    }
+    
+    .main {
+        background-color: #FFFFFF;
+    }
+    
+    .wrapper {
+        min-height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: #E5E5E5;
+    }
+    
+    ._conteiner {
+        max-width: 1520px;
+        margin: 0px auto;
+        box-sizing: content-box;
+    }
+    
+    ._contactInfoElement {
+        box-sizing: content-box;
+    }
+    
+    .custom-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        width: 16px;
+        height: 16px;
+        background-color: #FFFFFF;
+    }
+    
+    .custom-checkbox:not(:disabled)+label::before {
+        background-color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+    }
+    
+    .custom-checkbox+label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        margin-bottom: 16px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 19px;
+        /* identical to box height */
+        color: #2B2E34;
+    }
+    
+    .custom-checkbox+label::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #FFFFFF;
+        margin-right: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+    }
+    
+    .custom-checkbox:checked+label::before {
+        border-color: #FFFFFF;
+        background-color: #FFFFFF;
+        background-image: url("/img/marketPlace/info/galochka.png");
+    }
+    /*****************************Header**********************************************************/
+    
+    .header {
+        position: relative;
+        background: #FFFFFF;
+    }
+    
+    .header__container {
+        display: flex;
+        /*     border-style: solid;
+        border-width: 1px;*/
+        margin-top: 23px;
+        /*   border-color: blue;*/
+    }
+    
+    .header__logo {
+        display: flex;
+        flex-direction: column;
+        Width: 275.38px;
+        Height: 65.89px;
+        margin-left: 76.62px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    .header__logo__text {
+        margin-left: 60.38px;
+        margin-top: 7px;
+    }
+    
+    .header__logo__underText {
+        margin-top: 9px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #555555;
+    }
+    
+    .header__logo__img {
+        position: absolute;
+        left: 313.62px;
+        right: 81.73%;
+        top: 17px;
+        bottom: 46.52%;
+    }
+    
+    .header__drop-menu {}
+    
+    .header__drop-menu__img {
+        margin-top: 18px;
+    }
+    
+    .header__search {
+        margin-bottom: 27px;
+        margin-left: 72px;
+        max-width: 835px;
+        padding-left: 66px;
+        background: #F7F7F7;
+        position: relative;
+        max-height: 54px;
+        overflow: hidden;
+    }
+    
+    .header__search__icon {
+        position: absolute;
+        left: 29.88px;
+        top: 18px;
+    }
+    
+    .header__search__input {
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 19px;
+        /* identical to box height */
+        color: #73737B;
+        width: 786px;
+        height: 54px;
+        background: #F7F7F7;
+    }
+    
+    .header__BuyGroup {
+        margin-top: 6.874px;
+        margin-left: 66px;
+    }
+    
+    .BuyGroup__BuyDeliver {
+        margin-top: 10.28px;
+        margin-right: 32px;
+    }
+    
+    .BuyGroup__User {
+        margin-top: 10.7px;
+        margin-right: 29.13px;
+    }
+    
+    .BuyGroup__Bag {
+        margin-top: 9.55px;
+    }
+    
+    .bagCount {
+        position: absolute;
+        width: 16.2px;
+        height: 16.2px;
+        left: 1711px;
+        top: 32px;
+        background: #1DBCD2;
+        border-radius: 50%;
+    }
+    
+    .textBagCoutn {
+        margin-top: 1.492px;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 13px;
+        /* identical to box height */
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .header__contactInfo__container {
+        margin-top: 23px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 20px;
+        /* identical to box height, or 111% */
+        color: #2B2E34;
+        display: flex;
+    }
+    
+    .header__contactInfo__container a:visited {
+        color: #2B2E34;
+    }
+    
+    .contactInfo__geo {
+        width: 159px;
+        margin-right: 157px;
+    }
+    
+    .geo {
+        margin-left: 15px;
+    }
+    
+    .contactInfo__number {
+        width: 200px;
+        margin-right: 157px;
+    }
+    
+    .number {
+        margin-left: 15.95px;
+    }
+    
+    .contactInfo__email {
+        width: 206px;
+        margin-right: 157px;
+    }
+    
+    .email {
+        margin-left: 12px;
+    }
+    
+    .contactInfo__aplication {
+        width: 196px;
+        margin-right: 157px;
+    }
+    
+    .aplication {
+        margin-left: 13px
+    }
+    
+    .contactInfo__contacts {
+        width: 130.25px;
+    }
+    
+    .contacts {
+        margin-left: 13.75px
+    }
+    /*************************************advertisment***************************************************************/
+    
+    .advertisementPage {
+        background: linear-gradient(91.79deg, #1DBCD1 16.94%, #3DDCF1 83.14%);
+    }
+    
+    .advertisementPage__conteiner {
+        display: flex;
+    }
+    
+    .descriptionBlock {
+        color: #FFFFFF;
+    }
+    
+    .description {}
+    
+    .description__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 53px;
+        margin-top: 82px;
+        margin-left: 14px;
+    }
+    
+    .description__body {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        /* or 150% */
+        display: flex;
+        align-items: center;
+        width: 579px;
+        margin-left: 14px;
+        margin-top: 7px;
+    }
+    
+    .advertismentImg {
+        position: relative;
+        left: -175px;
+    }
+    
+    .advertismentButton {
+        margin-left: 43.62px;
+        box-sizing: content-box;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        /* identical to box height */
+        letter-spacing: 0.02em;
+        color: #2B2E34;
+        position: absolute;
+        width: 282px;
+        height: 78px;
+        left: 1450px;
+        top: 261px;
+        background: #FFFFFF;
+        border-radius: 2px;
+    }
+    
+    .advertismentButton__img {
+        position: absolute;
+        margin-top: 33px;
+        margin-left: 51px;
+    }
+    
+    .advertismentButton__button:visited {
+        color: #2B2E34;
+    }
+    
+    .advertismentButton__button {
+        margin-left: 127.89px;
+        margin-top: 27px;
+    }
+    /******************************Path***************************************************/
+    
+    .path {
+        background-color: #FFFFFF;
+    }
+    
+    .path__conteiner {
+        margin-top: 80px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 19px;
+        /* identical to box height */
+        color: #2B2E34;
+    }
+    
+    .child:visited {
+        color: #2B2E34;
+    }
+    
+    .root {
+        color: #858A93;
+    }
+    /*/*******************************/
+    
+    .pageMarketPlace {
+        background-color: #FFFFFF;
+    }
+    
+    .marketPlace__Filter {
+        border-radius: 3px;
+        width: 355px;
+        height: 1910px;
+        background: #F4F4F4;
+        border-radius: 3px;
+    }
+    
+    .pageMarketPlace__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 53px;
+        /* identical to box height, or 132% */
+        color: #2B2E34;
+        margin-top: 65px;
+        margin-bottom: 58px;
+    }
+    
+    .marketPlace__Filter__title__conteiner .title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 28px;
+        /* identical to box height */
+        color: #2B2E34;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    
+    .filter__conteiner {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    
+    .filter__conteiner .title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        /* identical to box height */
+        color: #2B2E34;
+        margin-top: 59px;
+        margin-bottom: 26px;
+    }
+    
+    .filter__conteiner .title::after {
+        background: url("/img/marketPlace/info/openFiltr.svg");
+        /*не рабит*/
+    }
+    
+    .marketPlace__Filter__title__conteiner {
+        display: flex;
+    }
+    
+    .thowOff {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #7E838C;
+        margin-top: 34px;
+        margin-left: 93px;
+    }
+    
+    .imgFilterTitle {
+        margin-top: 34px;
+        margin-left: 14px;
+    }
