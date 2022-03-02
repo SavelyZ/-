@@ -150,7 +150,7 @@
     }
     
     .main {
-        background-color: #FFFFFF;
+        background: #E5E5E5;
     }
     
     .wrapper {
@@ -217,6 +217,68 @@
         border-color: #FFFFFF;
         background-color: #FFFFFF;
         background-image: url("/img/marketPlace/info/galochka.png");
+    }
+    
+    .slidecontainer {
+        width: 100%;
+    }
+    
+    .slider {
+        margin-top: 15px;
+        -webkit-appearance: none;
+        width: 295px;
+        height: 3px;
+        background: #38D3E8;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 295px;
+        height: 0px;
+        background: #38D3E8;
+        cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+        width: 0px;
+        height: 18px;
+        background: #38D3E8;
+        cursor: pointer;
+        border: 2px solid #38D3E8;
+    }
+    
+    ._slider[type="range"]::-moz-range-progress {
+        background-color: #38D3E8;
+    }
+    
+    ._slider[type="range"]::-moz-range-track {
+        background-color: #7E838C;
+    }
+    
+    .slider_[type="range"]::-moz-range-progress {
+        background-color: #7E838C;
+    }
+    
+    .slider_[type="range"]::-moz-range-track {
+        background-color: #38D3E8;
+    }
+    
+    .ruble {
+        position: relative;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 25px;
+        /* identical to box height, or 250% */
+        color: #2B2E34;
+        left: -3px;
+        bottom: 3px;
     }
     /*****************************Header**********************************************************/
     
@@ -379,9 +441,7 @@
         margin-right: 157px;
     }
     
-    .email {
-        margin-left: 12px;
-    }
+    .email {}
     
     .contactInfo__aplication {
         width: 196px;
@@ -478,7 +538,7 @@
     /******************************Path***************************************************/
     
     .path {
-        background-color: #FFFFFF;
+        background: #E5E5E5;
     }
     
     .path__conteiner {
@@ -501,15 +561,25 @@
     /*/*******************************/
     
     .pageMarketPlace {
-        background-color: #FFFFFF;
+        background: #E5E5E5;
     }
     
     .marketPlace__Filter {
         border-radius: 3px;
         width: 355px;
-        height: 1910px;
+        height: 1950px;
         background: #F4F4F4;
         border-radius: 3px;
+    }
+    
+    .marketPlace__body__conteiner {
+        display: flex;
+        ;
+    }
+    
+    .marketPlace__product__conteiner {
+        display: flex;
+        flex-direction: column;
     }
     
     .pageMarketPlace__title {
@@ -541,26 +611,27 @@
     }
     
     .filter__conteiner .title {
+        margin-top: 59px;
+        margin-bottom: 26px;
+        font-family: Euclid Circular A;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
         line-height: 23px;
         /* identical to box height */
         color: #2B2E34;
-        margin-top: 59px;
-        margin-bottom: 26px;
     }
     
-    .filter__conteiner .title::after {
-        background: url("/img/marketPlace/info/openFiltr.svg");
-        /*не рабит*/
+    .filter__conteiner .title img {
+        margin-left: 24px;
+        margin-top: 8px;
     }
     
     .marketPlace__Filter__title__conteiner {
         display: flex;
     }
     
-    .thowOff {
+    .throwOff {
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -568,9 +639,556 @@
         color: #7E838C;
         margin-top: 34px;
         margin-left: 93px;
+        cursor: pointer;
     }
     
     .imgFilterTitle {
         margin-top: 34px;
         margin-left: 14px;
+        cursor: pointer;
+    }
+    
+    .heating__body {
+        display: block;
+    }
+    
+    .openFilter {
+        cursor: pointer;
+    }
+    
+    .brend__conteiner {}
+    
+    .brend__body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .brend__conteiner .openFilter {
+        margin-left: 204px;
+    }
+    
+    .range__conteiner {
+        position: relative;
+        overflow: hidden;
+        height: 35px;
+    }
+    
+    ._slider {
+        position: absolute;
+        margin-left: -295px;
+    }
+    
+    .rangePrice {
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        /* identical to box height */
+        color: #2B2E34;
+    }
+    
+    .rangePrice__conteiner {
+        display: flex;
+    }
+    
+    .rangePrice__conteiner {
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        /* identical to box height */
+        color: #2B2E34;
+        position: relative;
+    }
+    
+    .rangePrice_1 {
+        position: absolute;
+    }
+    
+    .rangePrice_2 {
+        position: absolute;
+        margin-left: 84px;
+    }
+    
+    .countSection__body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .countSection__conteiner .openFilter {
+        margin-left: 88px;
+    }
+    
+    .countSection__conteiner .title {
+        margin-top: 84px;
+    }
+    
+    .mezhR__body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mezhR__conteiner .openFilter {
+        margin-left: 30px;
+    }
+    
+    .heatSquare__body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .colors__body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .heatSquare__conteiner .openFilter {
+        margin-left: 80px;
+    }
+    
+    .colors__conteiner .openFilter {
+        margin-left: 217px;
+    }
+    
+    .product__controlInfo {
+        display: flex;
+        margin-left: 35px;
+        width: 1131px;
+        height: 87px;
+        background: #F4F4F4;
+        border-radius: 3px;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        /* identical to box height */
+        color: #2B2E34;
+    }
+    
+    .product__productGrid__conteiner {
+        width: 1132px;
+        height: 2575px;
+        margin-left: 35px;
+        margin-top: 35px;
+    }
+    
+    .productGrid__productRow__conteiner {
+        display: flex;
+        width: 1132px;
+        height: 487px;
+        margin-bottom: 35px;
+        justify-content: space-between;
+    }
+    
+    .product {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 354px;
+        height: 487px;
+        background: #FFFFFF;
+        border-radius: 2px;
+    }
+    
+    .towar {
+        margin-left: 8px;
+        color: #7E838C;
+    }
+    
+    .product__controlInfo__count {
+        margin-top: 32px;
+        margin-left: 41px;
+    }
+    
+    .cena {
+        margin-right: 8px;
+        color: #7E838C;
+    }
+    
+    .product__controlInfo__priceSort {
+        margin-top: 32px;
+        margin-left: 700px;
+    }
+    
+    .product__controlInfo__priceSort img {
+        position: relative;
+        margin-left: 20px;
+        margin-top: 8px;
+    }
+    
+    .product__img {
+        overflow: hidden;
+        margin-top: 58px;
+        height: 241px;
+    }
+    
+    .product__img img {
+        display: block;
+        margin: auto;
+    }
+    
+    .product__review {
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+        /* or 156% */
+        color: #2B2E34;
+        margin-left: 29px;
+        margin-top: 38px;
+    }
+    
+    .product__buy_conteiner {
+        box-sizing: content-box;
+        margin-left: 31px;
+        margin-top: 18px;
+        display: flex;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        /* identical to box height, or 125% */
+        color: #2B2E34;
+    }
+    
+    .product__buy_conteiner .price {
+        position: relative;
+        margin-top: 25px;
+        box-sizing: content-box;
+    }
+    
+    .goBusket {
+        position: absolute;
+        width: 82px;
+        height: 82px;
+        background: #38D3E8;
+        margin-left: 241px;
+    }
+    
+    .goBusket img {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    
+    .price .ruble {
+        position: relative;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 25px;
+        /* identical to box height, or 192% */
+        color: #2B2E34;
+        margin-left: 5px;
+        top: -5px;
+    }
+    
+    .cenaSale {
+        margin-left: 23px;
+        position: relative;
+        margin-top: 31px;
+        box-sizing: content-box;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 14px;
+        /* or 96% */
+        color: #7E838C;
+    }
+    
+    .cenaSale .ruble {
+        position: relative;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 8px;
+        line-height: 14px;
+        /* or 180% */
+        color: #7E838C;
+        margin-left: 5px;
+        top: -7px;
+    }
+    
+    .cenaSale:before {
+        position: absolute;
+        content: "";
+        width: 63.97px;
+        height: 0px;
+        border: 1.2px solid #F31B4F;
+        transform: rotate(-9.99deg);
+        margin-left: -13px;
+        margin-top: 13px;
+    }
+    
+    .sale {
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        width: 110px;
+        height: 36px;
+        background: #F31B4F;
+        border-radius: 2px 0px 0px 0px;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 19px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .sale img {
+        width: 14px;
+        height: 15px;
+        margin-left: 17px;
+        margin-right: 12px;
+    }
+    
+    .SEO {
+        width: 1095px;
+        height: 638px;
+        margin-top: 190px;
+        margin-left: 413px;
+    }
+    
+    .SEO__title {
+        margin-bottom: 48px;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 44px;
+        color: #2B2E34;
+    }
+    
+    .SEO__text {
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 26px;
+        /* or 162% */
+        color: #2B2E34;
+        margin-bottom: 40px;
+    }
+    
+    .SEO__subtitle {
+        margin-top: 8px;
+        margin-bottom: 40px;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        /* or 162% */
+        color: #2B2E34;
+    }
+    
+    .footer {
+        margin-top: 190px;
+        background: #FFFFFF;
+    }
+    
+    .footer__conteiner {
+        /* Параметры границы */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer__conteiner .contacts {
+        width: 354px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer__conteiner .contacts .logo {
+        display: flex;
+        /* Параметры границы */
+    }
+    
+    .footer__conteiner .contacts .logo .header__logo__text {
+        margin-left: -40px;
+    }
+    
+    .number__conteiner {
+        display: flex;
+    }
+    
+    footer .email {
+        display: flex;
+    }
+    
+    .social_vk_inst {
+        display: flex;
+    }
+    
+    ._cat {
+        width: 244px;
+        height: 363px;
+    }
+    
+    footer .info {
+        width: 148px;
+        height: 264px;
+    }
+    
+    footer .phone {
+        margin-top: 68px;
+        margin-bottom: 55px;
+    }
+    
+    footer .phone .pn {
+        margin-bottom: 6px;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        /* or 175% */
+        color: #7E838C;
+    }
+    
+    footer .phone .pt {
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        /* or 175% */
+        color: #7E838C;
+    }
+    
+    footer .phone .number {
+        margin-left: 12.95px;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 20px;
+        /* identical to box height, or 111% */
+        text-align: right;
+        color: #2B2E34;
+    }
+    
+    footer .phone .number__conteiner {
+        margin-bottom: 19px;
+    }
+    
+    footer .email {
+        margin-bottom: 59px;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 20px;
+        /* identical to box height, or 111% */
+        color: #2B2E34;
+    }
+    
+    footer .email .text {
+        margin-left: 14.43px;
+    }
+    
+    footer .social .text {
+        margin-bottom: 21px;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 20px;
+        /* identical to box height, or 111% */
+        color: #2B2E34;
+    }
+    
+    footer .txt {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+        /* identical to box height, or 156% */
+        display: flex;
+        align-items: center;
+        color: #7E838C;
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+        /* identical to box height, or 156% */
+        display: flex;
+        align-items: center;
+        color: #7E838C;
+        margin-left: 11.04px;
+        margin-right: 20px;
+    }
+    
+    .cascade_1 {
+        display: flex;
+        justify-content: space-between;
+        height: 525px;
+        border-bottom: 1px solid rgba(217, 218, 225, 0.8);
+        margin-top: 55px;
+    }
+    
+    ._title {
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        /* identical to box height */
+        color: #2B2E34;
+        margin-bottom: 26px;
+    }
+    
+    ._body {
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 33px;
+        /* or 206% */
+        color: #7E838C;
+    }
+    
+    .cascade_2 {
+        margin-top: 49px;
+        margin-bottom: 38px;
+        display: flex;
+        font-family: Euclid Circular A;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #7E838C;
+        justify-content: space-between;
+    }
+    
+    .develop {
+        display: flex;
+    }
+    
+    .develop img {
+        margin-left: 28.65px;
+        margin-right: 18.61px;
+    }
+    /***415***/
+    
+    @media (max-width:415px) {
+        .header__logo__underText {
+            display: none;
+        }
+        .header__logo__img_ {
+            width: 23.5px;
+            height: 36.87px;
+        }
     }

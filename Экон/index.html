@@ -99,43 +99,503 @@
                         <div class="marketPlace__Filter">
                             <div class="marketPlace__Filter__title__conteiner">
                                 <div class="title">Фильтры</div>
-                                <a href="" class="thowOff">Cбросить</a>
-                                <img class="imgFilterTitle" src="/img/marketPlace/info/krest.svg" alt="">
+                                <!--<a href="" class="thowOff">Cбросить</a>-->
+                                <span class="throwOff" onclick="throwOff()">Cбросить</span>
+                                <img class="imgFilterTitle" src="/img/marketPlace/info/krest.svg" alt="" onclick="throwOff()">
                             </div>
                             <form action="" method="post">
                                 <div class="filter__conteiner">
-                                    <div class="title">Отопительное оборудование</div>
-                                    <input type="checkbox" class="custom-checkbox" id="happy1" name="happy1">
-                                    <label for="happy1">Радиаторы отопления</label>
-                                    <input type="checkbox" class="custom-checkbox" id="happy2" name="happy2">
-                                    <label for="happy2">Конвекторы отопления</label>
-                                    <input type="checkbox" class="custom-checkbox" id="happy3" name="happy3">
-                                    <label for="happy3">Полотенцесушители</label>
-                                    <input type="checkbox" class="custom-checkbox" id="happy4" name="happy4">
-                                    <label for="happy4">Арматура для радиаторов</label>
+                                    <div class="heating__conteiner">
+                                        <div class="title">Отопительное оборудование
+                                            <!--  <a class="openFilter" onclick="openCloseFiltr()" href="#"><img src="/img/marketPlace/info/openFilter.svg" alt=""></a> -->
+                                            <span class="openFilter" onclick="openCloseFiltr('fltr_1')"><img src="/img/marketPlace/info/openFilter.svg" alt=""></span>
+                                        </div>
+                                        <div class="heating__body" id="fltr_1">
+                                            <input type="checkbox" class="custom-checkbox" id="happy1" name="happy1">
+                                            <label for="happy1">  Радиаторы отопления</label>
+                                            <input type="checkbox" class="custom-checkbox" id="happy2" name="happy2">
+                                            <label for="happy2">Конвекторы отопления</label>
+                                            <input type="checkbox" class="custom-checkbox" id="happy3" name="happy3">
+                                            <label for="happy3">Полотенцесушители</label>
+                                            <input type="checkbox" class="custom-checkbox" id="happy4" name="happy4">
+                                            <label for="happy4">Арматура для радиаторов</label>
+                                        </div>
+                                    </div>
+                                    <div class="brend__conteiner">
+                                        <div class="title">
+                                            Бренд
+                                            <span class="openFilter" onclick="openCloseFiltr('fltr_2')"><img src="/img/marketPlace/info/openFilter.svg" alt=""></span>
+                                        </div>
+                                        <div class="brend__body" id="fltr_2">
+                                            <input type="checkbox" class="custom-checkbox" id="brend1" name="brend1">
+                                            <label for="brend1"> Purmo</label>
+                                            <input type="checkbox" class="custom-checkbox" id="brend2" name="brend2">
+                                            <label for="brend2">Irsap</label>
+                                            <input type="checkbox" class="custom-checkbox" id="brend3" name="brend3">
+                                            <label for="brend3">Terma</label>
+                                            <input type="checkbox" class="custom-checkbox" id="brend4" name="brend4">
+                                            <label for="brend4">Loten</label>
+                                            <input type="checkbox" class="custom-checkbox" id="brend5" name="brend5">
+                                            <label for="brend5">Guardo</label>
+                                        </div>
+                                    </div>
+                                    <div class="priceSlider__conteiner">
+                                        <div class="title">
+                                            Цена
+                                        </div>
+                                        <div class="range__conteiner">
+                                            <input type="range" min="0" max="295" value="0" class="slider slider_" id="myRange" step="1" oninput="sliderMove(id)">
+                                            <input type="range" min="0" max="295" value="115" class="_slider slider" id="_myRange" step="1" oninput="sliderMove(id)">
+                                        </div>
+                                        <div class="rangePrice__conteiner">
+                                            <p id="rangePrice_1" class="rangePrice_1" title="etxt">
+                                                3000 <span class="ruble">₽</span></p>
+                                            <p id="rangePrice_2" class="rangePrice_2">
+                                                23000 <span class="ruble">₽</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="countSection__conteiner">
+                                        <div class="title">
+                                            Количество секций
+                                            <span class="openFilter" onclick="openCloseFiltr('fltr_3')"><img src="/img/marketPlace/info/openFilter.svg" alt=""></span>
+                                        </div>
+                                        <div class="countSection__body" id="fltr_3">
+                                            <input type="checkbox" class="custom-checkbox" id="cs1" name="cs1">
+                                            <label for="cs1">4</label>
+                                            <input type="checkbox" class="custom-checkbox" id="cs2" name="cs2">
+                                            <label for="cs2">6</label>
+                                            <input type="checkbox" class="custom-checkbox" id="cs3" name="cs3">
+                                            <label for="cs3">8</label>
+                                            <input type="checkbox" class="custom-checkbox" id="cs4" name="cs4">
+                                            <label for="cs4">12</label>
+                                        </div>
+                                    </div>
+                                    <div class="mezhR__conteiner">
+                                        <div class="title">
+                                            Межосетевое расстояние
+                                            <span class="openFilter" onclick="openCloseFiltr('fltr_4')"><img src="/img/marketPlace/info/openFilter.svg" alt=""></span>
+                                        </div>
+                                        <div class="mezhR__body" id="fltr_4">
+                                            <input type="checkbox" class="custom-checkbox" id="mr1" name="mr1">
+                                            <label for="mr1">20см</label>
+                                            <input type="checkbox" class="custom-checkbox" id="mr2" name="mr2">
+                                            <label for="mr2">35см</label>
+                                            <input type="checkbox" class="custom-checkbox" id="mr3" name="mr3">
+                                            <label for="mr3">50см</label>
+                                        </div>
+                                    </div>
+                                    <div class="heatSquare__conteiner">
+                                        <div class="title">
+                                            Площадь отопления
+                                            <span class="openFilter" onclick="openCloseFiltr('fltr_5')"><img src="/img/marketPlace/info/openFilter.svg" alt=""></span>
+                                        </div>
+                                        <div class="heatSquare__body" id="fltr_5">
+                                            <input type="checkbox" class="custom-checkbox" id="hs1" name="hs1">
+                                            <label for="hs1">Более 19 м²</label>
+                                            <input type="checkbox" class="custom-checkbox" id="hs2" name="hs2">
+                                            <label for="hs2">Менее 8 м²</label>
+                                            <input type="checkbox" class="custom-checkbox" id="hs3" name="hs3">
+                                            <label for="hs3">от 10 до 14 м²</label>
+                                            <input type="checkbox" class="custom-checkbox" id="hs4" name="hs4">
+                                            <label for="hs4">от 15 до 26 м²</label>
+                                        </div>
+                                    </div>
+                                    <div class="colors__conteiner">
+                                        <div class="title">
+                                            Цвет
+                                            <span class="openFilter" onclick="openCloseFiltr('fltr_6')"><img src="/img/marketPlace/info/openFilter.svg" alt=""></span>
+                                        </div>
+                                        <div class="colors__body" id="fltr_6">
+                                            <input type="checkbox" class="custom-checkbox" id="c1" name="c1">
+                                            <label for="c1">Красный</label>
+                                            <input type="checkbox" class="custom-checkbox" id="c2" name="c2">
+                                            <label for="c2">желтый</label>
+                                            <input type="checkbox" class="custom-checkbox" id="c3" name="c3">
+                                            <label for="c3">зеленый</label>
+                                            <input type="checkbox" class="custom-checkbox" id="c4" name="c4">
+                                            <label for="c4">синий</label>
+                                            <input type="checkbox" class="custom-checkbox" id="c5" name="c5">
+                                            <label for="c5">фиолетовый</label>
+                                            <input type="checkbox" class="custom-checkbox" id="c6" name="c6">
+                                            <label for="c6">Розовый</label>
+                                            <input type="checkbox" class="custom-checkbox" id="c7" name="c7">
+                                            <label for="c7">Бежий</label>
+                                            <input type="checkbox" class="custom-checkbox" id="c8" name="c8">
+                                            <label for="c8">Белый</label>
+                                            <input type="checkbox" class="custom-checkbox" id="c9" name="c9">
+                                            <label for="c9">Черный</label>
+                                            <input type="checkbox" class="custom-checkbox" id="c10" name="c10">
+                                            <label for="c10">Серый</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
                         <div class="marketPlace__product__conteiner">
-                            <div class="product__controlInfo"></div>
+                            <div class="product__controlInfo">
+                                <div class="product__controlInfo__count">
+                                    2394
+                                    <span class="towar">товаров</span>
+                                </div>
+                                <div class="product__controlInfo__priceSort">
+                                    <span class="cena">Цена:</span> По возрастанию
+                                    <span class="openFilter" onclick="openCloseFiltr('fltr_price')"><img src="/img/marketPlace/info/openFilter.svg" alt=""></span>
+                                </div>
+                            </div>
                             <div class="product__productGrid__conteiner">
                                 <div class="productGrid__productRow__conteiner">
-                                    <div class="product"></div>
-                                    <div class="product"></div>
-                                    <div class="product"></div>
+                                    <div class="product">
+                                        <!--при добавлении sale уменьшать mg-left у basket на 51px-->
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/1.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <div class="sale">
+                                            <img src="/img/marketPlace/info/sale.svg" alt="">
+                                            <div class="text">Акция</div>
+                                        </div>
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/2.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                                <span class="cenaSale">5890<span class="ruble">₽</span></span>
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/3.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Радиатор биметаллический Royal Thermo PianoForte Bianco Traffico
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="productGrid__productRow__conteiner"></div>
-                                <div class="productGrid__productRow__conteiner"></div>
-                                <div class="productGrid__productRow__conteiner"></div>
-                                <div class="productGrid__productRow__conteiner"></div>
+                                <div class="productGrid__productRow__conteiner">
+                                    <div class="product">
+                                        <!--при добавлении sale уменьшать mg-left у basket на 51px-->
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/1.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/2.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/3.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Радиатор биметаллический Royal Thermo PianoForte Bianco Traffico
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="productGrid__productRow__conteiner">
+                                    <div class="product">
+                                        <!--при добавлении sale уменьшать mg-left у basket на 51px-->
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/1.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <div class="sale">
+                                            <img src="/img/marketPlace/info/sale.svg" alt="">
+                                            <div class="text">Акция</div>
+                                        </div>
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/2.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                                <span class="cenaSale">5890<span class="ruble">₽</span></span>
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/3.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Радиатор биметаллический Royal Thermo PianoForte Bianco Traffico
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="productGrid__productRow__conteiner">
+                                    <div class="product">
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/1.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/2.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/3.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Радиатор биметаллический Royal Thermo PianoForte Bianco Traffico
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="productGrid__productRow__conteiner">
+                                    <div class="product">
+                                        <!--при добавлении sale уменьшать mg-left у basket на 51px-->
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/1.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/2.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Биметаллический радиатор Royal Thermo Indigo Super
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <div class="product__img">
+                                            <img src="/img/marketPlace/products/3.png" alt="">
+                                        </div>
+                                        <div class="product__review">
+                                            Радиатор биметаллический Royal Thermo PianoForte Bianco Traffico
+                                        </div>
+                                        <div class="product__buy_conteiner">
+                                            <div class="price">4 250<span class="ruble">₽</span>
+                                            </div>
+                                            <a href="" class="goBusket">
+                                                <div><img src="/img/marketPlace/info/busket.svg" alt=""></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <article class="SEO _conteiner">
+                <div class="SEO__title ">Длинный или короткий заголовок SEO текста</div>
+                <div class="SEO__text ">
+                    Интернет-магазин автоматической водосберегающей сантехники и дизайн радиаторов отопления Сантехническое и отопительное оборудование - основные продукты интернет-магазина "Экон Урфо ". На сайте urfoecon.ru, вы можете выбрать и купить автоматическую водосберегающую
+                    сантехнику и дизайн радиаторы отопления. На сайте urfoecon.ru, вы можете выбрать: смесители, душевые, смывные устройства для унитазов и писсуаров, а так же дополнительные товары: сушилки для рук, дозаторы мыла, фены для волос, держатели
+                    туалетной бумаги, ведра и другое.
+
+                </div>
+                <div class="SEO__text ">
+                    Преимущества автоматической водосберегающей сантехники — экономия денег и воды! Результат будет заметен с первого месяца установки. Обратитесь к нашим специалистам и узнайте вашу выгоду при использовании автоматической водосберегающей сантехники. Звоните
+                    или оставляйте заявку на расчет.
+                </div>
+                <div class="SEO__subtitle">Подзаголовок внутри текста</div>
+                <div class="SEO__text ">
+                    На сайте urfoecon.ru, вы можете выбрать красивые современные модели радиаторов отопления Европейских и Российских производителей. Радиаторы представленные в каталоге,изготовлены из прочных материалов: сталь, алюминий и биметалл. Мы уверены в качестве
+                    нашей продукции и предоставляем гарантию до 25 лет на радиаторы отопления. В нашем ассортименте: водяные и электрические радиаторы, высокие, средние и низкие, узкие и широкие, трубчатые и панельные модели, стандартные белые, черные,
+                    бежевые и любые цвета по шкале RAL.
+                </div>
+                <div class="SEO__text">
+                    Обратитесь к нашим специалистам и подберите радиаторы, которые гармонично впишутся в ваш интерьер и будут эффективно обогревать ваш дом. Звоните или оставляйте заявку на расчет.
+                </div>
+            </article>
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="footer__conteiner _conteiner">
+                <div class="cascade_1">
+                    <div class="contacts">
+                        <div class="logo">
+                            <img src="/img/header/logo.png" alt="не могу найти лого картинку:(" class="header__logo__img_">
+                            <div class="header__logo">
+                                <div class="header__logo__text">
+                                    <img src="/img/header/logo_text.png" alt="" class="header_logo_textImg">
+                                    <div class="header__logo__underText">Энергосберегающие технологии</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone">
+                            <div class="number__conteiner">
+                                <img src="/img/footer/phone.svg" alt="">
+                                <div class="number">+7 (495) 506-36-50</div>
+                            </div>
+                            <div class="pn">Пн-Пт: с 08:00 до 19:00</div>
+                            <div class="pt">Сб-Вс: с 08:00 до 16:00</div>
+                        </div>
+                        <div class="email">
+                            <img src="/img/footer/email.svg" alt="">
+                            <div class="text">office@uconerfo.ru</div>
+                        </div>
+                        <div class="social">
+                            <div class="text">Мы в сети</div>
+                            <div class="social_vk_inst">
+                                <img src="/img/footer/vk.svg" alt="">
+                                <div class="txt">ВКонтакте</div>
+                                <img src="/img/footer/inst.svg" alt="">
+                                <div class="txt">instagram</div>
+                            </div>
+                        </div>
+                    </div>
+                    <article class="categories1 _cat">
+                        <div class="categories1__title _title">Категории продукции</div>
+                        <div class="categories1__body _body">Трубчатые радиаторы Панельные радиаторы Полотенцесушители Вертикальные радиаторы Дизайн радиаторы Внутрипольные конвекторы Конвекторы водяные Водосберегающая сантехника Теплый пол Чугунные дизайн радиаторы Арматура для радиаторов</div>
+                    </article>
+                    <article class="categories2 _cat">
+                        <div class="categories2__title _title">Категории продукции</div>
+                        <div class="categories2__body _body">Трубчатые радиаторы Панельные радиаторы Полотенцесушители Вертикальные радиаторы Дизайн радиаторы Внутрипольные конвекторы Конвекторы водяные Водосберегающая сантехника Теплый пол Чугунные дизайн радиаторы Арматура для радиаторов</div>
+                    </article>
+                    <article class="info">
+                        <div class="_title">Информация</div>
+                        <div class="categories2__body _body">
+                            О компании Готовые решения Наша продукция Цвета Сертификаты Доставка и оплата Контакты
+                        </div>
+                    </article>
+                </div>
+                <div class="cascade_2">
+                    <div class="copyright">Copyright © 2014 - 2020</div>
+                    <div class="politic">Политика конфиденциальности</div>
+                    <div class="personal">Обработка персональной информации</div>
+                    <div class="develop">
+                        <div class="devtxt">Разработано</div> <img src="/img/footer/request.svg" alt="">
+                        <div class="brText">Request</div>
+                        <div class="devtxt">Disign</div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+    <script src="/js/script.js "></script>
 </body>
 
 </html>
